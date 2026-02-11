@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - Essenciel Thérapie</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Essenciel Thérapie</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+    <!--LOADER-->
+    <div id="loader">
+        <img src="assets/images/logowhite.png" alt="Logo Essenciel" id="loader-logo">
+    </div>
 
     <header>
         <div class="container-header">
@@ -31,7 +36,7 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li>
                         <a href="https://www.instagram.com/essenciel.fr/" target="_blank">
-                            <img src="assets/icones/instagram.png" alt="Instagram">
+                            <img src="assets/icones/insta_header.png" alt="Instagram">
                         </a>
                     </li>
                 </ul>
@@ -53,12 +58,12 @@
                 </div>
 
                 <!-- Image à droite qui chevauche -->
-                <div class="img-container">
+                <div class="img-container animate-img">
                     <img src="assets/images/gwenhome.jpeg" alt="Gwendoline - Essenciel">
                 </div>
 
                 <!-- Boutons sous le bloc couleur -->
-                <div class="btn-container">
+                <div class="btn-container animate-btn">
                     <a href="accompagnements.html" class="btn">Mes accompagnements</a>
                     <a href="formations.html" class="btn">Formations</a>
                     <a href="contact.html" class="btn">Me contacter</a>
@@ -66,9 +71,69 @@
             </div>
         </section>
 
+        <section class="oracle">
+            <div class="oracle-container">
+                <div class="img-oracle animate-img-left">
+                    <img src="assets/images/oracle.jpeg" alt="Oracle - Essenciel">
+                </div>
+
+                <div class="text-oracle-essenciel">
+                    <h2>Mon oracle</h2>
+                    <p>
+                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                    </p>
+                </div>
+
+                <div class="text-oracle">
+                    <h2>Un oracle, qu'est-ce que c'est ?</h2>
+                    <p>
+                        Un oracle est un outil ou une méthode qui permet d’obtenir des réponses, des conseils ou des éclairages sur des situations, des choix ou des questionnements personnels. Contrairement à une simple prédiction, l’oracle agit comme un guide : il aide à mieux comprendre vos émotions, vos décisions et les énergies qui vous entourent.
+                        Les oracles peuvent prendre différentes formes : cartes, symboles, tirages numériques ou textes inspirants. Chaque tirage offre une interprétation unique, permettant de réfléchir, de se recentrer ou de prendre du recul face à une situation donnée.
+                        L’objectif principal d’un oracle n’est pas de dire ce qui va se passer de manière définitive, mais de vous offrir des pistes et des perspectives pour mieux vous connaître et orienter vos choix avec conscience.
+                    </p>
+                </div>
+
+                <div class="btn-oracle animate-btn">
+                    <a href="https://www.etsy.com/shop/boutiqueessencielfr/?etsrc=sdt" target="_blank" class="btn">Découvrir mon oracle</a>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-left">
+                <a href="https://www.instagram.com/essenciel.fr/" target="_blank">
+                    <img src="assets/icones/insta_footer.png" alt="Instagram">
+                </a>
+                <ul class="footer-links">
+                    <li><a href="accompagnements.html">Mes accompagnements</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-center">
+                <img src="assets/images/logowhite.png" alt="Logo Essenciel" class="footer-logo">
+                <p>&copy; 2026 | Essenciel | Gwendoline Tronel</p>
+                <p>&copy; Site réalisé par <a href="https://www.alpha-portfolio.fr" target="_blank">Alpha</a></p>
+            </div>
+
+            <div class="footer-col footer-right">
+                <ul class="footer-links">
+                    <li><a href="mentionslegales.html">Mentions Légales</a></li>
+                    <li><a href="cgv.html">Conditions Générales de Vente</a></li>
+                    <li><a href="confidentialite.html">Politique de Confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
 <script src="assets/js/script.js"></script>
+<script src="assets/js/burger.js"></script>
 </html>

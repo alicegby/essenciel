@@ -26,6 +26,49 @@ h1 {
     font-display: swap;
 }
 
+/* LOADER */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.95); /* fond blanc semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Logo rebondissant */
+#loader-logo {
+  width: 150px;
+  border-radius: 60%;
+  animation: bounce 1.2s infinite;
+}
+
+/* Keyframes pour le rebond */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Explosion style soleil */
+.loader-explode {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFD700, rgba(255,215,0,0));
+  animation: explode 2s forwards;
+}
+
+@keyframes explode {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(6); opacity: 0; }
+}
+
 /* HEADER */
 .container-header {
     display: flex;
@@ -41,6 +84,7 @@ h1 {
     height: 200px;
     border-radius: 60%;
 }
+
 .nav-links ul li a {
     display: flex;        /* pour aligner texte + icône */
     align-items: center;  /* centre le texte et l'icône verticalement */
@@ -94,7 +138,7 @@ h1 {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: var(--color-secondary);
+  background-color: #A28873;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -112,31 +156,48 @@ h1 {
 }
 
 /* Menu Burger - Media Query */
-@media (max-width: 768px) {
-  .nav-links ul {
-    display: none; /* cache les liens par défaut */
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 70px; /* sous le header */
-    right: 0;
-    width: 200px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-
-  .nav-links ul.show {
-    display: flex; /* affiche le menu quand burger cliqué */
-  }
-
-  .burger {
-    display: flex; /* visible sur mobile/tablette */
-  }
-
-  .container-header {
-    justify-content: space-between;
+@media (max-width: 1024px) {
+.container-header {
     position: relative;
-  }
+    z-index: 1000;
+}
+
+.burger {
+    display: flex;
+    position: absolute;
+    right: 30px;   /* ← distance exacte */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links ul {
+    position: absolute;
+    top: 100%;
+    right: 30px;
+    width: 220px;
+
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.nav-links ul.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 }
 
 /* MAIN */
@@ -207,4 +268,368 @@ h1 {
 .btn-container .btn:hover {
     background-color: #F7E7D7;
     color: #020302;
+}
+
+/* Oracle */
+.oracle-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 300px auto 80px auto; /* centré horizontalement */
+    padding: 0 20px;
+}
+
+/* Bloc texte couleur plein largeur */
+.text-oracle-essenciel {
+    background-color: #F7E7D7;
+    padding: 60px 40px 40px 450px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Texte et titre */
+.text-oracle-essenciel h2 {
+    font-family: 'Virtual', sans-serif;
+    font-size: 4rem;
+    color: #A28873;
+}
+
+.text-oracle-essenciel p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Image chevauchante à gauche */
+.img-oracle {
+    position: absolute;   /* pour sortir du flux et chevaucher */
+    top: -30px;           /* léger décalage depuis le haut du bloc */
+    left: 0;
+    width: 400px;
+    z-index: 10;          /* plus haut que le bloc couleur */
+    border-radius: 15px;
+}
+
+.img-oracle img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Texte explicatif sous le bloc couleur */
+.text-oracle {
+    padding: 20px 40px 10px 450px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.text-oracle h2 {
+    font-family: 'Virtual', sans-serif;
+    font-size: 4rem;
+    color: #A28873;
+}
+
+.text-oracle p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Bouton sous le texte */
+.btn-oracle {
+    margin-top: 20px;
+}
+
+.btn-oracle .btn {
+    background-color: #A28873;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-left: 450px;
+}
+
+.btn-oracle .btn:hover {
+    background-color: #F7E7D7;
+    color: #020302;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #A28873;
+    padding: 40px 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: #020302;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* pour que ça reste responsive */
+}
+
+/* Colonne Gauche */
+.footer-left {
+    display: flex;
+    align-items: center; /* centre verticalement logo et li */
+    gap: 30px;           /* espace entre le logo et la colonne de liens */
+}
+
+/* Instagram */
+.footer-left .footer-instagram img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.footer-left .footer-instagram img:hover {
+    transform: scale(1.1);
+}
+
+/* Liens en colonne */
+.footer-left .footer-links {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #F7E7D7;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #020302;
+    transform: scale(1.1);
+}
+
+/* Colonne Milieu */
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* centre horizontalement le logo */
+    justify-content: space-between; /* espace entre logo et textes */
+    height: 100%;                /* prend toute la hauteur du footer */
+    text-align: center;
+}
+
+/* Logo centrale */
+.footer-center .footer-logo {
+    height: 80px;
+    border-radius: 60%;
+    margin-bottom: 80px;
+}
+
+/* Paragraphes en bas */
+.footer-center p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+    color: #020302;
+}
+
+.footer-center p a {
+    color: #F7E7D7;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-center p a:hover {
+    color: #020302;
+    transform: scale(1.1);
+}
+
+/* Colonne droite */
+.footer-right {
+    display: flex;
+    align-items: center;      /* centre verticalement la colonne */
+    justify-content: flex-end; /* pousse le contenu à droite */
+}
+
+/* Liste en colonne */
+.footer-right .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right; /* texte aligné à droite */
+}
+
+/* Animations JS */
+.animate-img {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-img-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-btn {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-btn-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1024px) {
+
+    /* HEADER */
+    .container-header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo img {
+        height: 120px;
+    }
+
+    /* BIENVENUE */
+
+    .bienvenue-container {
+        margin: 40px auto;
+    }
+
+    .text-block {
+        padding: 40px 20px;
+    }
+
+    .text-block h2 {
+        font-size: 2.5rem;
+    }
+
+    .text-block p {
+        margin-right: 0; /* supprime l'espace réservé à l'image */
+    }
+
+    .img-container {
+        position: relative; /* remet l'image dans le flux */
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-container .btn {
+        text-align: center;
+    }
+
+
+    /* ORACLE */
+
+    .oracle-container {
+        margin: 120px auto 60px auto;
+    }
+
+    .text-oracle-essenciel {
+        padding: 40px 20px;
+    }
+
+    .text-oracle-essenciel h2 {
+        font-size: 2.5rem;
+    }
+
+    .img-oracle {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-oracle {
+        padding: 20px;
+    }
+
+    .text-oracle h2 {
+        font-size: 2.5rem;
+    }
+
+    .btn-oracle .btn {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-left {
+        order: 1;
+    }
+
+    .footer-right {
+        order: 2;
+    }
+
+    .footer-center {
+        order: 3; /* passe en dernier */
+    }
+
+    /* Colonne gauche */
+    .footer-left {
+        flex-direction: column;   /* logo au-dessus */
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Instagram au-dessus */
+    .footer-left a {
+        order: -1;
+    }
+
+    /* Liste centrée */
+    .footer-left .footer-links {
+        align-items: center;
+    }
+
+    /* Colonne droite */
+    .footer-right {
+        justify-content: center;
+    }
+
+    .footer-right .footer-links {
+        text-align: center;
+    }
+
 }

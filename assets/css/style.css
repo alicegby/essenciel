@@ -85,6 +85,10 @@ h1 {
     border-radius: 60%;
 }
 
+.logo a {
+    cursor: pointer;
+}
+
 .nav-links ul li a {
     display: flex;        /* pour aligner texte + icône */
     align-items: center;  /* centre le texte et l'icône verticalement */

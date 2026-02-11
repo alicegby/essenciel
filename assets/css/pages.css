@@ -111,3 +111,180 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
+
+/* ACCOMPAGNEMENTS */
+
+/* Soins */
+.soins-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Bloc texte couleur plein largeur - Soins */
+.text-soins {
+    background-color: #F7E7D7;
+    padding: 60px 40px 40px 40px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.text-soins h2 {
+    font-family: 'Virtual', sans-serif;
+    font-size: 4rem;
+    color: #A28873;
+    margin-bottom: 20px;
+}
+
+.text-soins p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-right: 420px; /* espace pour l'image chevauchante */
+}
+
+/* Image chevauchante à droite - Soins */
+.img-soins {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 400px;
+    z-index: 2;
+}
+
+.img-soins img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Boutons sous le bloc couleur */
+.soins-container .btn-rdv {
+    display: inline-block;
+    background-color: #A28873;
+    color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Hover élégant */
+.btn-rdv:hover {
+    background-color: #F7E7D7;
+    color: #020302;
+    transform: scale(1.05);
+}
+
+/* Retraites */
+.retraites-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 180px auto 60px;
+    padding: 0 20px;
+    min-height: 500px; 
+}
+
+/* Image chevauchante à gauche */
+.img-retraites {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 400px;
+    z-index: 2;
+}
+
+.img-retraites img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Bloc texte couleur - Retraites */
+.text-retraites {
+    background-color: #F7E7D7;
+    padding: 60px 40px 40px 450px; /* espace pour image chevauchante */
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.text-retraites h2 {
+    font-family: 'Virtual', sans-serif;
+    font-size: 4rem;
+    color: #A28873;
+    margin-bottom: 20px;
+}
+
+.text-retraites p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Bouton chevauchant le bloc */
+
+
+/* Bouton style et hover */
+.retraites-container .btn-rdv {
+    display: inline-block;
+    background-color: #A28873;
+    color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 450px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn-rdv:hover {
+    background-color: #F7E7D7;
+    color: #020302;
+    transform: scale(1.05);
+}
+
+/* À PROPOS */
+
+
+
+/* ANIMATIONS JS */
+.animate-img {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-img-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-btn {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-btn-active {
+    opacity: 1;
+    transform: translateY(0);
+}

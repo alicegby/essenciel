@@ -524,11 +524,18 @@ h1 {
     /* BIENVENUE */
 
     .bienvenue-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;       /* centre horizontalement */
+        text-align: center;
+        gap: 20px;
         margin: 40px auto;
+        padding: 0 20px;
     }
 
     .text-block {
-        padding: 40px 20px;
+        padding: 30px 20px;
+        border-radius: 15px;
     }
 
     .text-block h2 {
@@ -536,63 +543,89 @@ h1 {
     }
 
     .text-block p {
-        margin-right: 0; /* supprime l'espace réservé à l'image */
+        font-size: 1rem;
+        margin: 0;
     }
 
     .img-container {
-        position: relative; /* remet l'image dans le flux */
+        position: relative;  /* remet dans le flux */
         top: 0;
         right: 0;
-        width: 100%;
-        margin-top: 20px;
+        width: 60%;
+        max-width: 300px;
+        margin: 20px auto;   /* centre horizontalement */
+        display: block;
+        left: auto !important;
     }
 
     .btn-container {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        gap: 15px;
     }
 
     .btn-container .btn {
+        width: 100%;
         text-align: center;
     }
 
-
-    /* ORACLE */
-
+    /* Oracle */
     .oracle-container {
-        margin: 120px auto 60px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        margin: 80px auto 40px auto;
+        padding: 0 20px;
     }
 
-    .text-oracle-essenciel {
-        padding: 40px 20px;
-    }
-
-    .text-oracle-essenciel h2 {
-        font-size: 2.5rem;
-    }
-
-    .img-oracle {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
+    .text-oracle-essenciel,
     .text-oracle {
-        padding: 20px;
+        padding: 30px 20px;
+        border-radius: 15px;
     }
 
+    .text-oracle-essenciel h2,
     .text-oracle h2 {
         font-size: 2.5rem;
     }
 
-    .btn-oracle .btn {
-        margin-left: 0;
-        display: block;
-        text-align: center;
+    .text-oracle-essenciel p,
+    .text-oracle p {
+        font-size: 1rem;
+        margin: 0;
     }
 
+    .img-oracle {
+        order: 3;
+        position: relative;   /* remet dans le flux */
+        top: 0;
+        left: 0;
+        width: 60%;
+        max-width: 300px;
+        margin: 20px auto;    /* centre horizontalement */
+        display: block;
+        z-index: 1;
+    }
+
+    .img-oracle img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .btn-oracle {
+        order: 4;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-oracle .btn {
+        width: 80%;
+        margin-left: 0;
+        text-align: center;
+    }
 
     /* FOOTER */
 
@@ -640,5 +673,30 @@ h1 {
     .footer-right .footer-links {
         text-align: center;
     }
+}
 
+@media (max-width: 480px) {
+
+    .text-block h2,
+    .text-oracle-essenciel h2,
+    .text-oracle h2 {
+        font-size: 2rem;
+    }
+
+    .text-block p,
+    .text-oracle-essenciel p,
+    .text-oracle p {
+        font-size: 0.9rem;
+    }
+
+    .img-container,
+    .img-oracle {
+        width: 80%;
+        max-width: 260px;
+    }
+
+    .btn-container .btn,
+    .btn-oracle .btn {
+        width: 100%;
+    }
 }

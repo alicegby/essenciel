@@ -172,7 +172,7 @@
 .mission-container {
     position: relative;
     max-width: 1200px;
-    margin: 350px auto 80px auto; /* centré horizontalement */
+    margin: 260px auto 80px auto; /* centré horizontalement */
     padding: 0 20px;
 }
 
@@ -199,7 +199,7 @@
 }
 
 /* Image chevauchante à gauche */
-.img-oracle {
+.img-mission {
     position: absolute;   /* pour sortir du flux et chevaucher */
     top: -30px;           /* léger décalage depuis le haut du bloc */
     left: 0;
@@ -208,7 +208,7 @@
     border-radius: 15px;
 }
 
-.img-oracle img {
+.img-mission img {
     width: 100%;
     display: block;
     border-radius: 15px;
@@ -281,7 +281,98 @@
     transform: translateY(0);
 }
 
-/* MENTIONS LÉGALES */
+/* Media Query */
+@media (max-width: 1024px) {
+
+    /* Container général */
+    .gwendo-container,
+    .mission-container {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    /* Bloc texte */
+    .text-block,
+    .text-gwendo-essenciel {
+        padding: 40px 20px;
+        border-radius: 15px;
+    }
+
+    /* Titres et paragraphes */
+    .text-block h2,
+    .text-gwendo-essenciel h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .text-block p,
+    .text-gwendo-essenciel p {
+        font-size: 1rem;
+        margin: 0; /* supprime l'espace réservé à l'image */
+        text-align: center;
+    }
+
+    /* Images chevauchantes deviennent normales, sous le bloc */
+    .img-container,
+    .img-mission {
+        position: relative; /* remet dans le flux */
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    .img-container img,
+    .img-mission img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    /* Boutons */
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-container .btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Google / lien centré */
+    .google {
+        padding: 20px 20px;
+    }
+
+    .google a {
+        display: inline-block;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* MEDIA QUERY PETIT MOBILE / SMARTPHONE */
+@media (max-width: 480px) {
+
+    .text-block h2,
+    .text-gwendo-essenciel h2 {
+        font-size: 2rem;
+    }
+
+    .text-block p,
+    .text-gwendo-essenciel p {
+        font-size: 0.9rem;
+    }
+
+    .btn-container .btn,
+    .google a {
+        width: 100%;
+    }
+}
+
+/* MENTIONS LÉGALES - CGV - CONFIDENTIALITÉ */
 .mentionslegales,
 .confidentialite,
 .cgv {
@@ -327,4 +418,317 @@
 .cgv a:hover {
     color: #020302;
     transform: scale(1.05);
+}
+
+/* Media Query */
+@media (max-width: 1024px) {
+    .mentionslegales,
+    .confidentialite,
+    .cgv {
+        width: 90%;
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 30px 20px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .mentionslegales h3,
+    .confidentialite h3,
+    .cgv h3 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .mentionslegales p,
+    .confidentialite p,
+    .cgv p {
+        text-align: justify;
+    }
+
+    .mentionslegales a,
+    .confidentialite a,
+    .cgv a {
+        display: inline-block;
+        margin-top: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .mentionslegales,
+    .confidentialite,
+    .cgv {
+        width: 95%;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 20px 15px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .mentionslegales h3,
+    .confidentialite h3,
+    .cgv h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .mentionslegales p,
+    .confidentialite p,
+    .cgv p {
+        text-align: left;
+    }
+
+}
+
+/* MES ACCOMPAGNEMENTS */
+.accompagnement {
+  width: 100%;
+  padding: 40px 20px;
+  margin: 40px 0; 
+  box-sizing: border-box;
+}
+
+.accompagnement-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.accompagnement-text {
+  flex: 1;
+}
+
+.accompagnement-text h2 {
+  font-family: 'Virtual', serif;
+  font-size: 4rem;
+  margin-bottom: 30px;
+  color: #A28873;
+}
+
+.accompagnement-text h3 {
+  font-family: 'Quicksand', serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #A28873;
+}
+
+.accompagnement-text p {
+    font-size: 1rem;
+    font-family: 'Quicksand', serif;
+    color: #020302;
+}
+
+.intro {
+  font-size: 1rem;
+  font-family: 'Quicksand', serif;
+  margin-bottom: 25px;
+  color: #020302;
+}
+
+/* COULEURS */
+.retraites {
+  background: #F7E7D7;
+}
+
+.soins {
+  background: #F7E7D7;
+}
+
+.hypnose {
+  background: #F7E7D7;
+}
+
+.accompagnement-centered {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.accompagnement-centered h2 {
+    font-family: 'Virtual', serif;
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #A28873;
+}
+
+.accompagnement-centered p {
+    font-size: 1rem;
+    font-family: 'Quicksand', serif;
+    color: #020302;
+}
+
+.btn-rdv {
+    text-align: center;      
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0;            
+    background: transparent; 
+}
+
+.btn-rdv .btn {
+    display: inline-block;   
+    padding: 15px 30px;      /* taille du bouton */
+    background-color: #A28873; 
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-rdv .btn:hover {
+    background-color: #F7E7D7;
+    color: #020302;
+    transform: scale(1.05);
+}
+
+/* CAROUSEL PORTRAIT */
+.carousel {
+    flex: unset;               /* supprime la largeur forcée */
+    width: 100%;               /* prend toute la largeur max du bloc texte */
+    max-width: 380px;          /* largeur max du carousel */
+    height: auto;              /* garde auto pour le ratio */
+    aspect-ratio: 3/4;         /* portrait */
+    position: relative;        /* important pour les images en absolute */
+    overflow: hidden;          /* cache les images hors cadre */
+    margin: 0 auto;            /* centre le carousel */
+    border-radius: 15px;
+}
+
+.carousel img {
+    position: absolute;       /* il faut absolument rester en absolute pour le JS */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+/* CARDS SOINS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.animate-block {
+    opacity: 0;
+    transform: translateY(40px); /* léger décalage vers le bas au départ */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-block-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Query */
+/* Media query mobile/tablette corrigée */
+@media (max-width: 992px) {
+
+  .accompagnement-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .accompagnement-text {
+    flex: unset;
+    max-width: 800px;
+  }
+
+  .accompagnement-text h2,
+  .accompagnement-centered h2 {
+    font-size: 3rem;
+  }
+
+  .accompagnement-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .accompagnement-text p,
+  .accompagnement-centered p,
+  .intro {
+    font-size: 1rem;
+  }
+
+  /* Carousel centré et plus petit */
+  .carousel {
+    flex: unset;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    aspect-ratio: 3/4;
+    position: relative;  /* important pour superposer les images */
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .carousel img {
+    position: absolute; /* doit rester absolute pour que le carousel fonctionne */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+  }
+
+  .carousel img.active {
+    opacity: 1;
+  }
+
+  .btn-rdv .btn {
+    display: inline-block;
+  }
+}
+
+/* Petit mobile */
+@media (max-width: 480px) {
+  .accompagnement-text h2,
+  .accompagnement-centered h2 {
+    font-size: 2rem;
+  }
+
+  .accompagnement-text h3 {
+    font-size: 1rem;
+  }
+
+  .accompagnement-text p,
+  .accompagnement-centered p,
+  .intro {
+    font-size: 0.9rem;
+  }
+
+  .carousel {
+    max-width: 260px;
+    aspect-ratio: 3/4;
+  }
 }

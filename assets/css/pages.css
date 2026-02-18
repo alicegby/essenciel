@@ -216,6 +216,7 @@
 
 .btn-container {
     display: flex;
+    position: absolute;
     gap: 20px;
     margin-top: 20px;
     justify-content: flex-start; /* alignés à gauche */

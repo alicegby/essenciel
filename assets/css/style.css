@@ -346,6 +346,10 @@ h1 {
 /* Bouton sous le texte */
 .btn-oracle {
     margin-top: 20px;
+    display: flex;
+    gap: 20px;              /* espace entre les boutons */
+    margin-left: 450px;     /* décalage global (au lieu de chaque bouton) */
+    flex-wrap: wrap;        /* optionnel → passe à la ligne sur petit écran */
 }
 
 .btn-oracle .btn {
@@ -356,7 +360,6 @@ h1 {
     font-family: 'Quicksand', sans-serif;
     color: #FFFFFF;
     display: inline-block;
-    margin-left: 450px;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 

@@ -21,6 +21,12 @@ h1 {
 }
 
 @font-face {
+    font-family: 'Fredoka';
+    src: url('../fonts/Fredoka.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Quicksand';
     src: url('../fonts/Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
     font-display: swap;
@@ -226,7 +232,7 @@ h1 {
 
 /* Texte et titre */
 .text-block h2 {
-    font-family: 'Virtual', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 4rem;
     color: #A28873;
     margin-bottom: 20px;
@@ -296,7 +302,7 @@ h1 {
 
 /* Texte et titre */
 .text-oracle-essenciel h2 {
-    font-family: 'Virtual', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 4rem;
     color: #A28873;
 }
@@ -332,7 +338,7 @@ h1 {
 }
 
 .text-oracle h2 {
-    font-family: 'Virtual', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 4rem;
     color: #A28873;
 }

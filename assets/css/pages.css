@@ -1,5 +1,5 @@
 .titre-page {
-    font-family: 'Virtual', sans-serif;  
+    font-family: 'Fredoka', sans-serif;  
     font-size: 5rem;                   
     color: #A28873;                     
     text-align: center;               
@@ -21,7 +21,7 @@
 }
 
 .text-contact h2 {
-    font-family: 'Virtual', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 4rem;
     color: #A28873;
 }
@@ -142,7 +142,7 @@
 
 /* Texte et titre */
 .text-block h2 {
-    font-family: 'Virtual', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 4rem;
     color: #A28873;
     margin-bottom: 20px;
@@ -187,7 +187,7 @@
 
 /* Texte et titre */
 .text-gwendo-essenciel h2 {
-    font-family: 'Virtual', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 4rem;
     color: #A28873;
 }
@@ -544,7 +544,7 @@
 }
 
 .accompagnement-text h2 {
-  font-family: 'Virtual', serif;
+  font-family: 'Fredoka', serif;
   font-size: 4rem;
   margin-bottom: 30px;
   color: #A28873;
@@ -771,7 +771,7 @@
 
 /* FORMATIONS */
 .titre-page-intro {
-    font-family: 'Virtual', sans-serif;  
+    font-family: 'Fredoka', sans-serif;  
     font-size: 5rem;                   
     color: #A28873;                     
     text-align: center;               

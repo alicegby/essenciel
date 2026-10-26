@@ -583,6 +583,10 @@
   background: #F7E7D7;
 }
 
+.constellation {
+  background: #F7E7D7;
+}
+
 .accompagnement-centered {
   max-width: 800px;
   margin: auto;
@@ -680,6 +684,53 @@
 .animate-block-active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* CONSTELLATION */
+.accompagnement-image {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.accompagnement-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.constellation .accompagnement-text h2 {
+    font-size: 2.5rem; /* 4rem est trop grand pour un titre aussi long */
+}
+
+.constellation .accompagnement-text ul {
+    padding-left: 1.2rem;
+    margin: 1rem 0;
+    font-family: 'Quicksand', serif;
+}
+
+.constellation .accompagnement-text li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.constellation .accompagnement-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+    .constellation .accompagnement-text ul {
+        text-align: left;
+        display: inline-block; /* liste lisible malgré le texte centré */
+    }
+}
+
+@media (max-width: 480px) {
+    .constellation .accompagnement-text h2 {
+        font-size: 1.8rem;
+    }
 }
 
 /* Media Query */

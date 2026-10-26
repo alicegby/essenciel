@@ -339,7 +339,7 @@ h1 {
 
 .text-oracle h2 {
     font-family: 'Fredoka', sans-serif;
-    font-size: 4rem;
+    font-size: 2rem;
     color: #A28873;
 }
 
@@ -351,11 +351,14 @@ h1 {
 
 /* Bouton sous le texte */
 .btn-oracle {
-    margin-top: 20px;
     display: flex;
-    gap: 20px;              /* espace entre les boutons */
-    margin-left: 450px;     /* décalage global (au lieu de chaque bouton) */
-    flex-wrap: wrap;        /* optionnel → passe à la ligne sur petit écran */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0 0 0;
 }
 
 .btn-oracle .btn {
@@ -365,6 +368,8 @@ h1 {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
     color: #FFFFFF;
+    width: auto;            /* au lieu de 80% */
+    text-align: center;
     display: inline-block;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -436,10 +441,19 @@ h1 {
 .footer-center {
     display: flex;
     flex-direction: column;
-    align-items: center;         /* centre horizontalement le logo */
-    justify-content: space-between; /* espace entre logo et textes */
-    height: 100%;                /* prend toute la hauteur du footer */
+    align-items: center;
+    justify-content: center;
+    height: auto;
     text-align: center;
+}
+
+.footer-center a img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;   /* vrai cercle */
+    margin: 0 auto 20px auto;
 }
 
 /* Logo centrale */
@@ -625,9 +639,11 @@ h1 {
 
     .btn-oracle {
         order: 4;
-        margin-top: 15px;
-        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
     }
 
     .btn-oracle .btn {
